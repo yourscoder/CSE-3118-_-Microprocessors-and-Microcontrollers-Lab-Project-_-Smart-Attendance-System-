@@ -1,0 +1,17 @@
+function doGet(e) {
+  // Open the sheet by ID or use active sheet
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+
+  // Get query parameters
+  var name = e.parameter.voltage || "Unknown";
+  var id = e.parameter.current || "Unknown";
+
+  // Get current timestamp
+  var timestamp = new Date();
+
+  // Append data to the sheet (Timestamp, Name, ID)
+  sheet.appendRow([timestamp, name, id]);
+
+  // Return a response back to ESP
+  return ContentService.createTextOutput("Data stored: " + name + ", " + id);
+}
