@@ -1,0 +1,2 @@
+# CSE-3118-_-Microprocessors-and-Microcontrollers-Lab-Project-_-Smart-Attendance-System-
+A hardware project with esp8286 microcontroller , fingerprint sensor , OLED display , which enrolls attendees first, then capture presence along with fingerprints, and save the log in google sheet via http request.  So basically it's an IOT project which demonstrates  microcontroller development board use in daily life and saving cost . 
